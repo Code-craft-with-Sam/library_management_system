@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to the Library Management System</h1>
+    <p class="lead">Manage your library's books and users with ease.</p>
+    <hr class="my-4">
+    <p>Use the navigation bar to add books, view books, borrow and return books, and more.</p>
+    {% if session['is_admin'] %}
+        <p><strong>Admin Privileges:</strong> You can add books and save library data.</p>
+    {% else %}
+        <p><strong>User Privileges:</strong> You can view books, borrow books, return books, and view genres.</p>
+    {% endif %}
+</div>
+{% endblock %}
