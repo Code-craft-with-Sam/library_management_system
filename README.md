@@ -20,6 +20,7 @@ A comprehensive and user-friendly Library Management System built using Flask an
 - 🔄 Return books
 - 📚 View available and borrowed books
 - 🛠️ Manage library inventory
+- 💕 Responsive design with Bootstrap.
 - 🚫 Error handling for various user actions
 
 ## 📂 Folder Structure
@@ -27,27 +28,28 @@ A comprehensive and user-friendly Library Management System built using Flask an
 ```
 library_management_system/
 │
-├── app.py              # Main application file
-├── config.py           # Configuration file
-├── requirements.txt    # Python dependencies
+├── app.py                  # Main application file
+├── config.py               # Configuration file
+├── requirements.txt        # Python dependencies
+├── Dockerfile              # for containerization
 │
 ├── library_system/     
-│   ├── __init__.py     # Package initializer
-│   ├── book.py         # Book model
-│   ├── user.py         # User model
-│   ├── library.py      # Library logic
-│   ├── exceptions.py   # Custom exceptions
+│   ├── __init__.py         # Package initializer
+│   ├── book.py             # Book model
+│   ├── user.py             # User model
+│   ├── library.py          # Library logic
+│   └── exceptions.py       # Custom exceptions
 │
 ├── static/             
-│   ├── css/            # CSS files
-│       └── styles.css  # Main stylesheet
+│   └── css/                # CSS files
+│       └── styles.css      # Main stylesheet
 │
-└── templates/          # HTML templates
-    ├── base.html       # Base template
-    ├── index.html      # Homepage template
-    ├── login.html      # Login page template
-    ├── borrow_book.html# Borrow book template
-    └── return_book.html# Return book template
+└── templates/              # HTML templates
+    ├── base.html           # Base template
+    ├── index.html          # Homepage template
+    ├── login.html          # Login page template
+    ├── borrow_book.html    # Borrow book template
+    └── return_book.html    # Return book template
 ```
 
 ## ⚙️ Working of Application
@@ -58,6 +60,8 @@ library_management_system/
 4. **🛠️ Manage Inventory**: Admin can manage the inventory by adding or removing books from the database.
 
 ## 🚀 How to Run
+
+### 🐍 Using Python Virtual Environment
 
 1. **Clone the repository**:
     ```bash
@@ -82,6 +86,21 @@ library_management_system/
     ```
 
 5. **Open your browser and navigate to** `http://127.0.0.1:5000`
+
+### 🐳 Using Docker
+
+1. **Build the Docker image**:
+   ```sh
+   docker build -t library_management_system .
+   ```
+
+2. **Run the Docker container**:
+   ```sh
+   docker run -d -p 5000:5000 --name library_management_system_container library_management_system
+   ```
+
+3. **Open your browser** and go to `http://localhost:5000`.
+
 
 ## 🛠️ Usage
 
@@ -109,12 +128,17 @@ This project covers the following Python topics:
 - **HTML & CSS**
   - Structuring web pages with HTML
   - Styling web pages with CSS
+  - Bootstrap for responsive design
 
 - **Python Basics**
   - Classes and objects
   - Error handling with try-except blocks
   - List comprehensions
   - Dictionary operations
+
+- **Docker for containerization**
+
+- **Git for version control**
 
 ## 🤝 Contributing
 
@@ -128,3 +152,7 @@ We welcome contributions to improve this Library Management System. To contribut
 ## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with ❤️ by [Amit Yadav](https://github.com/Liquizar)
